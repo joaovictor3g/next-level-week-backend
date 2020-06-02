@@ -87,3 +87,5 @@ const pointController = {
     }
 
 };
+
+export default pointController;
