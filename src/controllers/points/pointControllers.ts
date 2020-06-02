@@ -35,7 +35,7 @@ const pointController = {
 
         const trx = await knex.transaction();
         const point = {
-            image: 'image-fake',
+            image: 'https://images.unsplash.com/photo-1550989460-0adf9ea622e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=400&q=60',
             name, 
             email, 
             whatsapp,
@@ -87,5 +87,3 @@ const pointController = {
     }
 
 };
-
-export default pointController;
