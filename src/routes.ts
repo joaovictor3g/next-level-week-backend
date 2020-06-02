@@ -2,18 +2,8 @@ import { Router, Request, Response } from 'express';
 
 const routes = Router();
 
-routes.get('/', (req: Request, res: Response) => {
-    return res.json([
-        {
-            name: "João",
-            id: 1
-        },
+import itemController from './controllers/itemControllers';
 
-        {
-            name: "Diego",
-            id: 2
-        }
-    ])
-});
+routes.get('/items', itemController.create);
 
 export default routes;
