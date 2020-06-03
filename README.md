@@ -5,7 +5,7 @@
 - Open the folder backend.
 - Run `npm run knex:migrate` to run all migrations
 - Run `npm run dev`
-- Application will be running on port `3333`
+- Access the address `http://localhost:3333`
 
 ### 🛬 Routes 
 
