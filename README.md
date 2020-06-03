@@ -19,8 +19,4 @@
 - NodeJS
 - ExpressJS
 - KnexJS
-<<<<<<< HEAD
 - Cors
-=======
-- Cors
->>>>>>> e064bfa0682ea94d850bb35ddfd953a2b1591059
