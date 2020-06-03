@@ -14,3 +14,9 @@
 |/items     |/points    |        
 |/points    |           
 |/points/:id|
+
+### Techs
+- NodeJS
+- ExpressJS
+- KnexJS
+- Cors
