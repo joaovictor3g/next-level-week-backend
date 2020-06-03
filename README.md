@@ -9,11 +9,11 @@
 
 ### Routes 
 
-|  GET      |   POST    |
-|-----------|-----------|
-|/items     |/points    |        
-|/points    |           
-|/points/:id|
+|  GET      |   POST    |   PUT    |  DELETE   |
+|-----------|-----------|----------|-----------|
+|/items     |/points    |Soon      |   Soon    |
+|/points    |           |          |           |
+|/points/:id|           |          |           |
 
 ### Techs
 - NodeJS
