@@ -1,13 +1,13 @@
-# Backend da Aplicação Next Level Week
+# Backend da Aplicação Next Level Week 🚀 - Ecoleta ♼
 
-### How to run?
-- clone this repository with: `git clone`
+### 🏃 How to run?
+- Clone this repository with: `git clone`
 - Open the folder backend.
-- run `npm run knex:migrate` to run all migrations
-- run `npm run dev`
-- application will be running on port `3333`
+- Run `npm run knex:migrate` to run all migrations
+- Run `npm run dev`
+- Application will be running on port `3333`
 
-### Routes 
+### 🛬 Routes 
 
 |  GET      |   POST    |   PUT    |  DELETE   |
 |-----------|-----------|----------|-----------|
@@ -15,7 +15,7 @@
 |/points    |           |          |           |
 |/points/:id|           |          |           |
 
-### Techs
+### 📱 Techs
 - NodeJS
 - ExpressJS
 - KnexJS
