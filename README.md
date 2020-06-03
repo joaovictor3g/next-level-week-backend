@@ -1,4 +1,4 @@
-# Backend da Aplicação Next Level Week 🚀 - Ecoleta ♼
+# Backend Next Level Week 🚀 - Ecoleta ♼
 
 ### 🏃 How to run?
 - Clone this repository with: `git clone`
