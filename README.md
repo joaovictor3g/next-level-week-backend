@@ -4,6 +4,7 @@
 - Clone this repository with: `git clone`
 - Open the folder backend.
 - Run `npm run knex:migrate` to run all migrations
+- Run `npm run knex:seed` to insert all items pre defineds
 - Run `npm run dev`
 - Access the address `http://localhost:3333`
 
