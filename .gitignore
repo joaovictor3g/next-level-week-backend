@@ -3,3 +3,5 @@ uploads/*
 tmp/*
 !uploads/.gitkeep
 !tmp/.gitkeep
+
+*.sqlite
