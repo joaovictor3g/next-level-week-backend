@@ -1,1 +1,5 @@
 node_modules
+uploads/*
+tmp/*
+!uploads/.gitkeep
+!tmp/.gitkeep
