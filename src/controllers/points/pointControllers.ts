@@ -107,12 +107,10 @@ const pointController = {
 
         const points = await knex('points')
             .join('point_items', 'points.id', '=', 'point_items.point_id')
-            //.join('items', 'items.id', '=', 'point_items.item_id')
             .where('points.city', String(city))
             .where('points.uf', String(uf))
             .distinct()
-            .select('points.*')
-            //.select('items.title');
+            .select('points.*');
         
 
         const serializedPoints = points.map((point) => {
@@ -124,6 +122,14 @@ const pointController = {
 
         return res.json(serializedPoints)
 
+    },
+
+    async delete(req: Request, res: Response) {
+        const { id } = req.body;
+
+        await knex('points').where('id', id).del();
+
+        return res.json({ message: 'Delete succedded' })
     }
 
 };

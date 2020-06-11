@@ -32,5 +32,6 @@ routes.post('/points',
 routes.get('/points', pointController.index);
 routes.get('/points/:id', pointController.show);
 routes.get('/list-points', pointController.getPointByCityAndUf);
+routes.delete('/delete', pointController.delete);
 
 export default routes;
