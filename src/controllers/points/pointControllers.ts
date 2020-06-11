@@ -1,4 +1,4 @@
-import { Request, Response } from 'express';
+import { Request, Response, request, response } from 'express';
 import knex from '../../database/connection';
 
 const pointController = {
@@ -100,6 +100,30 @@ const pointController = {
             .select('items.title');
 
         return res.json({ point: serializedPoints, items });
+    },
+
+    async getPointByCityAndUf(req: Request, res: Response) {
+        const { city, uf } = req.query;
+
+        const points = await knex('points')
+            .join('point_items', 'points.id', '=', 'point_items.point_id')
+            //.join('items', 'items.id', '=', 'point_items.item_id')
+            .where('points.city', String(city))
+            .where('points.uf', String(uf))
+            .distinct()
+            .select('points.*')
+            //.select('items.title');
+        
+
+        const serializedPoints = points.map((point) => {
+            return { 
+                ...point,
+                image_url: `http://192.168.0.1:3333/uploads/${point.image}`
+             };
+        });
+
+        return res.json(serializedPoints)
+
     }
 
 };
