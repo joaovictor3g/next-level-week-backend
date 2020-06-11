@@ -125,7 +125,7 @@ const pointController = {
     },
 
     async delete(req: Request, res: Response) {
-        const { id } = req.body;
+        const { id } = req.params;
 
         await knex('points').where('id', id).del();
 

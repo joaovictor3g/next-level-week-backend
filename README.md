@@ -12,7 +12,7 @@
 
 |  GET      |   POST    |   PUT    |  DELETE   |
 |-----------|-----------|----------|-----------|
-|/items     |/points    |Soon      |   Soon    |
+|/items     |/points    |Soon      |/delete/:id|
 |/points    |           |          |           |
 |/points/:id|           |          |           |
 
