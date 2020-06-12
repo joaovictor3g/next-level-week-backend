@@ -104,23 +104,23 @@ const pointController = {
 
     async getPointByCityAndUf(req: Request, res: Response) {
         const { city, uf } = req.query;
-
+        
         const points = await knex('points')
-            .join('point_items', 'points.id', '=', 'point_items.point_id')
+            .innerJoin('point_items', 'points.id', '=', 'point_items.point_id')
+            .innerJoin('items', 'items.id', '=', 'point_items.item_id') 
             .where('points.city', String(city))
             .where('points.uf', String(uf))
+            .select('points.*', 'items.title')
             .distinct()
-            .select('points.*');
-        
 
         const serializedPoints = points.map((point) => {
             return { 
                 ...point,
-                image_url: `http://192.168.0.1:3333/uploads/${point.image}`
+                image_url: `http://192.168.0.1:3333/uploads/${point.image}`,
              };
         });
 
-        return res.json(serializedPoints)
+        return res.json(serializedPoints);
 
     },
 
